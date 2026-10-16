@@ -1,0 +1,360 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #400C00;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.page {
+  --ink: #400C00;
+  --accent: #6AA5B6;
+  --accent2: #EE7714;
+  --background: #FFFCF1;
+
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 28px clamp(20px, 5vw, 76px) 22px;
+  background: var(--background);
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: min(55vw, 650px);
+  height: min(55vw, 650px);
+  top: -25vw;
+  right: -15vw;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #6AA5B622,
+    transparent 70%
+  );
+}
+
+.topbar,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--ink);
+}
+
+.topbar {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+.spark {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.hero {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 54px 0 68px;
+}
+
+.brand {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+/* 4 United Humans graphic motif */
+.brand::after {
+  content: '{ }';
+  display: block;
+  margin-top: 18px;
+  color: var(--accent);
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
+  font-size: 30px;
+  letter-spacing: 0.18em;
+}
+
+.logo {
+  display: block;
+  object-fit: contain;
+  max-width: 88vw;
+  max-height: 180px;
+  mix-blend-mode: normal;
+}
+
+.logo.wide {
+  width: min(390px, 78vw);
+}
+
+.logo.lop {
+  width: min(470px, 88vw);
+}
+
+.logo.symbol {
+  width: min(155px, 40vw);
+  max-height: 130px;
+}
+
+.wordmark {
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
+  font-size: clamp(32px, 5vw, 48px);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.rule {
+  width: min(280px, 65vw);
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.65;
+  margin-bottom: 29px;
+  position: relative;
+}
+
+.rule span {
+  position: absolute;
+  left: calc(50% - 8px);
+  top: -11px;
+  padding: 0 8px;
+  background: var(--background);
+  color: var(--accent);
+  font-size: 15px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'EB Garamond', Garamond, Georgia, serif;
+  color: var(--ink);
+}
+
+h1 {
+  max-width: 760px;
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(38px, 6.8vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.description {
+  max-width: 470px;
+  margin: 22px 0 25px;
+  color: #68615D;
+  font-size: clamp(14px, 1.7vw, 16px);
+  line-height: 1.8;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #6AA5B666;
+  border-radius: 99px;
+  padding: 11px 17px;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent2);
+  box-shadow: 0 0 0 4px #EE771420;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 38px;
+  text-align: left;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.contact:hover {
+  transform: translateY(-2px);
+  opacity: 0.78;
+}
+
+.contact small,
+.contact strong {
+  display: block;
+}
+
+.contact small {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: #847B75;
+  margin-bottom: 4px;
+}
+
+.contact strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #6AA5B680;
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.footer {
+  border-top: 1px solid #400C002B;
+  padding-top: 17px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #8C817A;
+}
+
+.footer-center b {
+  color: var(--accent);
+  font-size: 15px;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 22px 20px 18px;
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .topbar {
+    font-size: 8px;
+    letter-spacing: 0.13em;
+  }
+
+  .hero {
+    padding: 36px 0 46px;
+  }
+
+  .brand {
+    min-height: 105px;
+    margin-bottom: 18px;
+  }
+
+  .brand::after {
+    margin-top: 12px;
+    font-size: 26px;
+  }
+
+  .logo.wide {
+    width: min(320px, 82vw);
+    max-height: 145px;
+  }
+
+  .logo.lop {
+    width: min(350px, 90vw);
+    max-height: 145px;
+  }
+
+  .logo.symbol {
+    width: min(135px, 38vw);
+  }
+
+  .wordmark {
+    font-size: clamp(30px, 8vw, 40px);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  h1 {
+    font-size: clamp(37px, 11vw, 54px);
+  }
+
+  .description {
+    max-width: 330px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contact {
+    margin-top: 30px;
+  }
+
+  .footer {
+    font-size: 8px;
+    letter-spacing: 0.07em;
+  }
+
+  .footer-center {
+    gap: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
