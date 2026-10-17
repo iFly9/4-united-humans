@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://github.com/iFly9/4-united-humans/",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
