@@ -12,7 +12,7 @@ function App() {
 
       <section className="hero">
         <div className="brand">
-          <img className="logo wide" src="/4-united-humans/logos/logo.png" alt="4 United Humans logo" />
+          <img className="logo wide" src="/logos/logo.png" alt="4 United Humans logo" />
 
         </div>
         <div className="rule"><span>✦</span></div>
